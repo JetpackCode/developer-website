@@ -4,7 +4,7 @@
     <title>JetpackCode</title>
     <style>
       html, body, .container {
-        height: 100%;
+        min-height: 99%;
       }
       body {
         font-family: Arial, sans-serif;
@@ -16,11 +16,53 @@
         align-items: center;
         justify-content: center;
       }
+      .table {
+        display: table;
+      }
+      .table-row {
+        display: table-row;
+      }
+      .table-cell {
+        display: table-cell;
+        width: 50%;
+        text-align: center;
+      }
+      .app {
+        margin: 20px;
+        width: 300px;
+        height: 300px;
+      }
+      img {
+        width: 100%;
+      }
     </style>
   </head>
   <body>
     <div class="container">
-      <span>JetpackCode</span>
+      <div class="content">
+        <h1>JetpackCode</h1>
+        <h2>Apps</h2>
+        <div class="table">
+          <div class="table-row">
+            <div class="table-cell">
+              <div class="app">
+                <img src="https://play-lh.googleusercontent.com/KLInTJHyh5CKzqBeqACQRMgc6TR9ZYL1q1jaCjFyoOwXahWbJtToiDelTP7qv8T-1cA=s360-rw">
+                <div>Random Generator Collection</div>
+                <div><a href="https://play.google.com/store/apps/details?id=io.github.jetpackcode.randomcharacter"><button>Google Play</button></a>
+                     <a href="https://randomgenerator.pages.dev"><button>WebApp</button></a></div>
+              </div>
+            </div>
+            <div class="table-cell">
+              <div class="app">
+                <img src="https://play-lh.googleusercontent.com/15L7jrFJ_xpR3LLNI3_G0wx5igeVkscx5odOYwUTfgjJeFi3q-_SGvP2yQPwTojWhjUO=s360-rw">
+                <div>Jumpy</div>
+                <div><a href="https://play.google.com/store/apps/details?id=io.github.jetpackcode.tilegame"><button>Google Play</button></a>
+                     <a href="https://jumpy.pages.dev"><button>WebApp</button></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
