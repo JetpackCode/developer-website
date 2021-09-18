@@ -56,8 +56,22 @@
                 <img src="https://play-lh.googleusercontent.com/yoiJG9Qm8wKOKZfX8pD6XsqNb9RgHzCbh_7t3ryHyK8mr83Sg4eLb_WZQa3EVHz-w9I=s360-rw">
                 <div>Multi⋅Random</div>
                 <div>
-                  <a href="https://play.google.com/store/apps/details?id=io.github.jetpackcode.randomcharacter"><button>Google Play</button></a>
-                  <a href="https://randomgenerator.pages.dev"><button>WebApp</button></a>
+                  <a href="" id="MultiRandomLink"><button>Open</button></a>
+                  <script>
+                    var link;
+                    var text;
+                    var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+                    if(isAndroid) {
+                      link = "https://play.google.com/store/apps/details?id=io.github.jetpackcode.randomcharacter";
+                      text = "Get it on Google&nbsp;Play";
+                    }
+                    else {
+                      link = "https://randomgenerator.pages.dev";
+                      text = "Open Web App";
+                    }
+                    document.getElementById("MultiRandomLink").href = link;
+                    document.getElementById("MultiRandomLink").firstElementChild.innerHTML = text;
+                  </script>
                 </div>
               </div>
             </div>
@@ -66,9 +80,26 @@
                 <img src="https://play-lh.googleusercontent.com/15L7jrFJ_xpR3LLNI3_G0wx5igeVkscx5odOYwUTfgjJeFi3q-_SGvP2yQPwTojWhjUO=s360-rw">
                 <div>Jumpy</div>
                 <div>
-                  <a href="https://play.google.com/store/apps/details?id=io.github.jetpackcode.tilegame"><button>Google Play</button></a>
-                  <a href="https://jumpy.pages.dev"><button>WebApp (1)</button></a>
-                  <a href="https://jumpy-game.netlify.app"><button>WebApp (2)</button></a>
+                  <a href="" id="JumpyLink"><button>Open</button></a>
+                  <script>
+                    var link;
+                    var text;
+                    var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+                    if(isAndroid) {
+                      link = "https://play.google.com/store/apps/details?id=io.github.jetpackcode.tilegame";
+                      text = "Get it on Google&nbsp;Play";
+                    }
+                    else if (Math.random() >= 0.5){
+                      link = "https://jumpy.pages.dev";
+                      text = "Open Web App";
+                    }
+                    else {
+                      link = "https://jumpy-game.netlify.app";
+                      text = "Open Web App";
+                    }
+                    document.getElementById("JumpyLink").href = link;
+                    document.getElementById("JumpyLink").firstElementChild.innerHTML = text;
+                  </script>
                 </div>
               </div>
             </div>
