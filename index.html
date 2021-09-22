@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JetpackCode</title>
+    <title>JetpackApps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       html, body, .container {
         min-height: 99%;
@@ -47,8 +48,7 @@
   <body>
     <div class="container">
       <div class="content">
-        <h2>JetpackCode</h2>
-        <h3>Apps</h3>
+        <h2>JetpackApps</h2>
         <div class="table">
           <div class="table-row">
             <div class="table-cell">
@@ -56,21 +56,31 @@
                 <img src="https://play-lh.googleusercontent.com/yoiJG9Qm8wKOKZfX8pD6XsqNb9RgHzCbh_7t3ryHyK8mr83Sg4eLb_WZQa3EVHz-w9I=s360-rw">
                 <div>Multi⋅Random</div>
                 <div>
-                  <a href="" id="MultiRandomLink"><button>Open</button></a>
+                  <a href="" id="MultiRandomLink1"><button>Open</button></a><br>
+                  <a href="" id="MultiRandomLink2" style="display: none"><button>Open</button></a>
                   <script>
                     var link;
                     var text;
                     var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
-                    if(isAndroid) {
+                    var isWindows = navigator.userAgent.toLowerCase().indexOf("windows") > -1;
+                    var isLinux = navigator.userAgent.toLowerCase().indexOf("linux") > -1;
+                    if(isAndroid || isWindows || isLinux) {
                       link = "https://play.google.com/store/apps/details?id=io.github.jetpackcode.randomcharacter";
                       text = "Get it on Google&nbsp;Play";
                     }
                     else {
                       link = "https://randomgenerator.pages.dev";
-                      text = "Open Web App";
+                      text = "Open Web Preview";
                     }
-                    document.getElementById("MultiRandomLink").href = link;
-                    document.getElementById("MultiRandomLink").firstElementChild.innerHTML = text;
+                    document.getElementById("MultiRandomLink1").href = link;
+                    document.getElementById("MultiRandomLink1").firstElementChild.innerHTML = text;
+                    if(!isAndroid) {
+                        link = "https://randomgenerator.pages.dev";
+                        text = "Open Web Preview";
+                        document.getElementById("MultiRandomLink2").href = link;
+                        document.getElementById("MultiRandomLink2").firstElementChild.innerHTML = text;
+                        document.getElementById("MultiRandomLink2").style.display = 'block';
+                    }
                   </script>
                 </div>
               </div>
@@ -80,25 +90,41 @@
                 <img src="https://play-lh.googleusercontent.com/15L7jrFJ_xpR3LLNI3_G0wx5igeVkscx5odOYwUTfgjJeFi3q-_SGvP2yQPwTojWhjUO=s360-rw">
                 <div>Jumpy</div>
                 <div>
-                  <a href="" id="JumpyLink"><button>Open</button></a>
+                  <a href="" id="JumpyLink1"><button>Open</button></a><br>
+                  <a href="" id="JumpyLink2" style="display: none"><button>Open</button></a>
                   <script>
                     var link;
                     var text;
                     var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
-                    if(isAndroid) {
+                    var isWindows = navigator.userAgent.toLowerCase().indexOf("windows") > -1;
+                    var isLinux = navigator.userAgent.toLowerCase().indexOf("linux") > -1;
+                    if(isAndroid || isWindows || isLinux) {
                       link = "https://play.google.com/store/apps/details?id=io.github.jetpackcode.tilegame";
                       text = "Get it on Google&nbsp;Play";
                     }
                     else if (Math.random() >= 0.5){
                       link = "https://jumpy.pages.dev";
-                      text = "Open Web App";
+                      text = "Open Web Preview";
                     }
                     else {
                       link = "https://jumpy-game.netlify.app";
-                      text = "Open Web App";
+                      text = "Open Web Preview";
                     }
-                    document.getElementById("JumpyLink").href = link;
-                    document.getElementById("JumpyLink").firstElementChild.innerHTML = text;
+                    document.getElementById("JumpyLink1").href = link;
+                    document.getElementById("JumpyLink1").firstElementChild.innerHTML = text;
+                    if(!isAndroid) {
+                        if (Math.random() >= 0.5){
+                            link = "https://jumpy.pages.dev";
+                            text = "Open Web Preview";
+                        }
+                        else {
+                            link = "https://jumpy-game.netlify.app";
+                            text = "Open Web Preview";
+                        }
+                        document.getElementById("JumpyLink2").href = link;
+                        document.getElementById("JumpyLink2").firstElementChild.innerHTML = text;
+                        document.getElementById("JumpyLink2").style.display = 'block';
+                    }
                   </script>
                 </div>
               </div>
