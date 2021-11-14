@@ -102,25 +102,15 @@
                       link = "https://play.google.com/store/apps/details?id=io.github.jetpackcode.tilegame";
                       text = "Get it on Google&nbsp;Play";
                     }
-                    else if (Math.random() >= 0.5){
-                      link = "https://jumpy.pages.dev";
-                      text = "Open Web Preview";
-                    }
                     else {
-                      link = "https://jumpy-game.netlify.app";
+                      link = "https://jumpy.pages.dev";
                       text = "Open Web Preview";
                     }
                     document.getElementById("JumpyLink1").href = link;
                     document.getElementById("JumpyLink1").firstElementChild.innerHTML = text;
                     if(!isAndroid) {
-                        if (Math.random() >= 0.5){
-                            link = "https://jumpy.pages.dev";
-                            text = "Open Web Preview";
-                        }
-                        else {
-                            link = "https://jumpy-game.netlify.app";
-                            text = "Open Web Preview";
-                        }
+                        link = "https://jumpy.pages.dev";
+                        text = "Open Web Preview";
                         document.getElementById("JumpyLink2").href = link;
                         document.getElementById("JumpyLink2").firstElementChild.innerHTML = text;
                         document.getElementById("JumpyLink2").style.display = 'block';
